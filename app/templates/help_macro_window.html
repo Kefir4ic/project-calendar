@@ -1,0 +1,12 @@
+{% macro help_modal() %}
+    <div class="full reveal" id="helpWindow" data-reveal>
+        <h1>It`s help macro window!</h1>
+      <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <script>
+            var popup = new Foundation.Reveal($('#helpWindow'));
+    </script>
+{% endmacro %}

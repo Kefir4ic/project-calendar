@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+
+{% import "help_macro_window.html" as help_macro_window %}
+
+{% block content %}
+
+    {% block styles %}
+        {{ super() }}
+        <link href="/static/css/calendar_grid.css" rel="stylesheet">
+    {% endblock %}
+
+    <div style="margin: 16px;">
+        <h1>Main window</h1>
+    </div>
+
+    <div class="calendar_grid">
+        {% for i in range(10) %}
+            <button class="round button">{{ i }}-елемент</button>
+        {% endfor %}
+    </div>
+
+    {{ help_macro_window.help_modal() }}
+{% endblock %}

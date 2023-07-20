@@ -1,0 +1,29 @@
+{% extends "_base_login.html" %}
+
+
+{% block content %}
+    <div class="card" style="width: 500px; position: absolute; top: 50%; left: 50%;  margin-right: -50%; transform: translate(-50%, -50%)">
+      <div class="card-divider">
+        <h4>Login</h4>
+      </div>
+      <div class="card-section">
+        <form method="post" name="login">
+          <div class="row collapse">
+                <div class="small-12  columns">
+                  <input name="username" type="text" placeholder="Username" required>
+                </div>
+          </div>
+          <div class="row collapse">
+            <div class="small-12 columns ">
+              <input name="password" type="password" placeholder="Password" required>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <input type="submit" class="round button" value="Login" style="text-align: center; margin: 5px;"/>
+            <a class="round button" href="/register" style="text-align: center; margin: 5px;">To Register</a>
+            <a class="round button" href="/google" style="text-align: center; margin: 5px;">To Google</a>
+          </div>
+        </form>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="no-js" >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block styles %}
+    <link rel="stylesheet" href="/static/css/foundation.css" />
+    {% endblock %}
+
+    <title>Project Calendar</title>
+
+    <script src="/static/js/vendor/jquery.js"></script>
+    <script src="/static/js/vendor/what-input.js"></script>
+    <script src="/static/js/vendor/foundation.js"></script>
+    <script src="/static/js/app.js"></script>
+</head>
+
+<body>
+    {% block navbar %}
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li><a href="{{ url_for('index') }}" style="color: black; font-weight: bold;">PROJECT CALENDAR</a></li>
+          <li><a data-toggle="helpWindow" style="align-items: center; display: flex; justify-content: center;">Help</a></li>
+        </ul>
+      </div>
+        <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li><a style="color: black; padding-right: 10px">Username</a></li>
+          <li><button class="hollow button secondary" href="{{ url_for('logout') }}">Logout</button></li>
+        </ul>
+      </div>
+    </div>
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+</body>
